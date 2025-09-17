@@ -4,14 +4,14 @@ metadata:
   name: kucc1
 spec:
   containers:
-  - name: nginx-container
+  - name: nginx1
     image: nginx:1.14.2
 
-  - name: redis-container
+  - name: redis1
     image: redis:latest
 
-  - name: memcached-container
+  - name: memcached1
     image: memcached:latest
 
-  - name: consul-container
+  - name: consul1
     image: hashicorp/consul:latest
