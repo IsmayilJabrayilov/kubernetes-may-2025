@@ -1,0 +1,49 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+  namespace: qa
+  labels:
+    hello: world
+spec:
+  containers:
+  - name: redis-container
+    image: redis:alpine
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+  namespace: dev
+  labels:
+    hello: world
+spec:
+  containers:
+  - name: redis-container
+    image: redis:alpine
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: memcached
+  namespace: qa
+  labels:
+    hello: world
+spec:
+  containers:
+  - name: memcached
+    image: memcached:latest
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: memcached
+  namespace: dev
+  labels:
+    hello: world
+spec:
+  containers:
+  - name: memcached
+    image: memcached:latest

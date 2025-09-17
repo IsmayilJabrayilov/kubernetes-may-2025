@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kucc1
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:1.14.2
+
+  - name: redis-container
+    image: redis:latest
+
+  - name: memcached-container
+    image: memcached:latest
+
+  - name: consul-container
+    image: hashicorp/consul:latest
